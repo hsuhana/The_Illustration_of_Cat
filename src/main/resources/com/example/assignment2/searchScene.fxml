@@ -16,7 +16,7 @@
             <Font name="Apple Casual" size="24.0" />
          </font>
       </Text>
-      <Button layoutX="98.0" layoutY="459.0" mnemonicParsing="false" onAction="#getCatDetails" text="KNOW MORE ABOUT THE CAT YOU PICK" />
+      <Button fx:id="getDetailButton" layoutX="98.0" layoutY="459.0" mnemonicParsing="false" onAction="#getCatDetails" text="KNOW MORE ABOUT THE CAT YOU PICK" />
       <ListView fx:id="listView" layoutX="61.0" layoutY="136.0" prefHeight="305.0" prefWidth="329.0" />
    </children>
 </AnchorPane>
