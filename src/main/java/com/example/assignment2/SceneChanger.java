@@ -3,7 +3,9 @@ package com.example.assignment2;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -37,5 +39,34 @@ public class SceneChanger {
 
         stage.setScene(scene);
         stage.show();
+    }
+
+    public static void addScenes(ActionEvent event, double width, double height, Image url) throws IOException{
+
+        FXMLLoader loader = new FXMLLoader(Main.class.getResource("randomCatImage.fxml"));
+        Parent root = loader.load();
+        Stage newStage = new Stage();
+        RandomCatImageController controller = loader.getController();
+        controller.loadRandomCat(url);
+
+        Scene scene = new Scene(root);
+        newStage.setTitle("GIVE ME A CAT");
+        newStage.setScene(scene);
+        newStage.setWidth(width);
+        newStage.setHeight(height);
+        newStage.show();
+
+        //        FXMLLoader loader = new FXMLLoader(getClass().getResource("randomCatImage.fxml"));
+//        Parent root = loader.load();
+//
+//        Stage newStage = new Stage();
+//        RandomCatImageController controller = loader.getController(); // Get the controller
+//        controller.setStage(newStage); // Pass the stage to the controller
+//        controller.initialize(); // Initialize the controller
+//
+//        Scene scene = new Scene(root);
+//        newStage.setTitle("GIVE ME A CAT");
+//        newStage.setScene(scene);
+//        newStage.show();
     }
 }

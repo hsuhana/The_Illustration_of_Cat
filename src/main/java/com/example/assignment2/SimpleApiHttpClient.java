@@ -100,6 +100,47 @@ public class SimpleApiHttpClient {
         return responseBody;
     }
 
+    public String fetchRandomCatImage(){
+
+        //https://api.thecatapi.com/v1/images/search?breed_ids=abys&api_key=live_34hi9nUH0V8LMyUDsUZfErtjPa0PD1Jbx03smVDXJtxp2TjO7gv5uXRl9dmilVXi
+
+        String uri = "https://api.thecatapi.com/v1/images/search";
+
+        HttpRequest request = null; // declare request outside try block
+        HttpResponse<String> response = null;
+
+        // Create HttpClient instance
+        HttpClient client = HttpClient.newHttpClient();
+
+        // Create a request
+        try {
+            request = HttpRequest.newBuilder()
+                    .uri(new URI(uri))
+                    .GET() // GET is default and can be omitted
+                    .build();
+        } catch (URISyntaxException e) {
+            e.printStackTrace();
+        }
+
+        try{
+            // Send the request and receive a response
+            response = client.send(request, HttpResponse.BodyHandlers.ofString());
+        } catch(IOException | InterruptedException e){
+            e.printStackTrace();
+        }
+
+        String responseBody = null;
+
+        try{
+            // Get the response body as String
+            responseBody = response.body();
+        } catch (NullPointerException e){
+            e.printStackTrace();
+        }
+
+        return responseBody;
+    }
+
     public ArrayList<Cat> parseJsonPosts(String responseBody) {
         Gson gson = new Gson();
 
@@ -134,5 +175,6 @@ public class SimpleApiHttpClient {
         ArrayList<CatImage> catImages = gson.fromJson(responseBody, catImageListType);
         return catImages;
     }
+
 
 }
