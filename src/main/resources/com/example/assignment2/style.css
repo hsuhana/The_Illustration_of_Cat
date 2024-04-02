@@ -1,0 +1,113 @@
+
+#searchScene{
+    -fx-background-image: url('searchBackground.jpg');
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: cover;
+}
+
+#searchForCats{
+    -fx-background-color: rgba(206, 227, 255, 1);
+    /*-fx-background-color: linear-gradient(to bottom, rgba(241, 251, 255, 1) 0%, rgba(113, 200, 232, 1) 100%);*/
+    -fx-background-radius: 10;
+    -fx-text-fill: #5c5c8a;
+    -fx-padding: 5px 15px;
+}
+
+#searchTextField{
+    -fx-background-radius: 10;
+    -fx-background-color: white;
+    -fx-padding: 5px 15px;
+}
+
+#listView{
+
+    -fx-background-color: transparent;
+}
+
+
+
+.list-cell:odd {
+    -fx-text-fill: rgba(98, 98, 98, 1);
+    -fx-background-color: rgba(255, 255, 255, 0.7); /* Change the background color as needed */
+    -fx-padding: 5px 15px;
+}
+
+.list-cell:even {
+    -fx-text-fill: rgba(98, 98, 98, 1);
+    -fx-background-color: rgba(255, 217, 217, 0.7); /* Change the background color as needed */
+    -fx-padding: 5px 15px;
+}
+
+/*Scrollbars*/
+.list-view .virtual-flow .scroll-bar:vertical,
+.list-view .virtual-flow .scroll-bar:vertical .track,
+.list-view .virtual-flow .scroll-bar:vertical .track-background,
+.list-view .virtual-flow .scroll-bar:horizontal,
+.list-view .virtual-flow .scroll-bar:horizontal .track,
+.list-view .virtual-flow .scroll-bar:horizontal .track-background {
+    -fx-background-color: transparent;
+}
+
+.list-view .virtual-flow .scroll-bar .increment-button,
+.list-view .virtual-flow .scroll-bar .decrement-button {
+    -fx-opacity: 0;
+    -fx-padding: 2;
+}
+
+.list-view .virtual-flow .scroll-bar:vertical .thumb {
+    -fx-background-color:  linear-gradient(to bottom, rgba(255, 239, 186, 1), rgba(254, 142, 113, 1));
+}
+
+#randomImageScene{
+    -fx-background-color:black;
+}
+
+#getDetailButton{
+    -fx-background-color: rgba(242, 229, 255, 1);
+    /*-fx-background-color: linear-gradient(to bottom, rgba(242, 229, 255, 1) 0%, #957EB9 100%);*/
+    -fx-background-radius: 10;
+    -fx-text-fill: #5c5c8a;
+    -fx-padding: 5px 15px;
+}
+
+#randomButton{
+    -fx-background-color: rgba(206, 255, 244, 1);
+    /*-fx-background-color: linear-gradient(to bottom, rgba(211, 243, 255, 1) 0%, #4780C7 100%);*/
+    -fx-background-radius: 10;
+    -fx-text-fill: #5c5c8a;
+    -fx-padding: 5px 15px;
+}
+
+.list-cell:selected {
+    -fx-text-fill: white;
+}
+
+#detailScene{
+    -fx-background-image: url('detailBackground.jpg');
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: cover;
+}
+
+#nameLabel, #temperamentLabel, #originLabel, #descriptionLabel{
+    -fx-text-fill: rgba(75, 140, 183, 1);
+
+}
+
+#name, #temperament, #origin, #description{
+    -fx-text-fill: rgba(218, 116, 37, 1);
+
+}
+
+#gridPane{
+    -fx-background-color: rgba(255, 255, 255, 0.65);
+    -fx-padding: 15px;
+    -fx-background-radius: 10;
+}
+
+#backToSearch{
+    -fx-background-color: rgba(255, 161, 114, 1);
+    /*-fx-background-color: linear-gradient(to bottom, #ffffe6 0%, #ff8080 100%);*/
+    -fx-background-radius: 10;
+    -fx-text-fill: #5c5c8a;
+    -fx-padding: 5px 15px;
+}

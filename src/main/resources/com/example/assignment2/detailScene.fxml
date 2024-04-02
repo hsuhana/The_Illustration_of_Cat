@@ -10,27 +10,27 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="518.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.assignment2.detailSceneController">
+<AnchorPane fx:id="detailScene" prefHeight="551.0" prefWidth="700.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.assignment2.detailSceneController">
    <children>
-      <Text layoutX="232.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cat Information" textAlignment="CENTER" wrappingWidth="220.18771362304688">
+      <Text fill="WHITE" layoutX="232.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cat Information" textAlignment="CENTER" wrappingWidth="220.18771362304688">
          <font>
             <Font name="Apple Casual" size="24.0" />
          </font>
       </Text>
-      <Button layoutX="326.0" layoutY="461.0" mnemonicParsing="false" onAction="#backToSearch" text="BACK" />
-      <GridPane layoutX="38.0" layoutY="78.0" prefHeight="176.0" prefWidth="635.0">
+      <Button fx:id="backToSearch" layoutX="319.0" layoutY="495.0" mnemonicParsing="false" onAction="#backToSearch" text="BACK" />
+      <GridPane fx:id="gridPane" layoutX="38.0" layoutY="78.0" prefHeight="186.0" prefWidth="635.0" stylesheets="@style.css">
         <columnConstraints>
-          <ColumnConstraints hgrow="SOMETIMES" maxWidth="250.5" minWidth="10.0" prefWidth="98.61172485351562" />
-          <ColumnConstraints hgrow="SOMETIMES" maxWidth="543.3820648193359" minWidth="0.0" prefWidth="536.3882751464844" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="250.5" minWidth="10.0" prefWidth="97.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="543.3820648193359" minWidth="0.0" prefWidth="508.5" />
         </columnConstraints>
         <rowConstraints>
-          <RowConstraints maxHeight="64.32766723632812" minHeight="10.0" prefHeight="24.767074584960938" valignment="TOP" vgrow="SOMETIMES" />
-          <RowConstraints maxHeight="133.4775161743164" minHeight="10.0" prefHeight="35.531036376953125" valignment="TOP" vgrow="SOMETIMES" />
-          <RowConstraints maxHeight="108.32742309570312" minHeight="10.0" prefHeight="38.2825927734375" valignment="TOP" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="64.32766723632812" minHeight="10.0" prefHeight="26.0" valignment="TOP" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="133.4775161743164" minHeight="10.0" prefHeight="26.0" valignment="TOP" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="108.32742309570312" minHeight="10.0" prefHeight="26.0" valignment="TOP" vgrow="SOMETIMES" />
             <RowConstraints maxHeight="196.43763732910156" minHeight="10.0" prefHeight="69.7174072265625" valignment="TOP" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Label alignment="TOP_LEFT" text="NAME">
+            <Label fx:id="name" alignment="TOP_LEFT" text="NAME">
                <font>
                   <Font size="12.0" />
                </font>
@@ -40,7 +40,7 @@
                   <Font size="12.0" />
                </font>
             </Label>
-            <Label text="TEMPERAMENT" GridPane.rowIndex="1">
+            <Label fx:id="temperament" text="TEMPERAMENT" GridPane.rowIndex="1">
                <font>
                   <Font size="12.0" />
                </font>
@@ -50,7 +50,7 @@
                   <Font size="12.0" />
                </font>
             </Label>
-            <Label text="ORIGIN" GridPane.rowIndex="2">
+            <Label fx:id="origin" text="ORIGIN" GridPane.rowIndex="2">
                <font>
                   <Font size="12.0" />
                </font>
@@ -60,7 +60,7 @@
                   <Font size="12.0" />
                </font>
             </Label>
-            <Label text="DESCRIPTION" GridPane.rowIndex="3">
+            <Label fx:id="description" text="DESCRIPTION" GridPane.rowIndex="3">
                <font>
                   <Font size="12.0" />
                </font>
@@ -72,6 +72,6 @@
             </Label>
          </children>
       </GridPane>
-      <ImageView fx:id="imageView" fitHeight="172.0" fitWidth="303.0" layoutX="199.0" layoutY="262.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imageView" fitHeight="172.0" fitWidth="303.0" layoutX="191.0" layoutY="294.0" pickOnBounds="true" preserveRatio="true" />
    </children>
 </AnchorPane>
