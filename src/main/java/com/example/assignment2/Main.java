@@ -21,7 +21,7 @@ public class Main extends Application {
         Parent root = FXMLLoader.load(getClass().getResource("searchScene.fxml"));
         Scene scene = new Scene(root);
 
-        Image icon = new Image("https://cdn-icons-png.freepik.com/512/826/826070.png?ga=GA1.1.1852331970.1708719654&");
+        Image icon = new Image("https://cdn4.iconfinder.com/data/icons/animals-57/500/cat_animal_-1024.png");
 
         stage.getIcons().add(icon);
         stage.setTitle("Cats");

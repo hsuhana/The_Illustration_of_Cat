@@ -21,7 +21,7 @@ public class SceneChanger {
 
         //get the Stage from the ActionEvent
         Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-
+        Image icon = new Image("https://cdn4.iconfinder.com/data/icons/animals-57/500/cat_animal_-1024.png");
         stage.setScene(scene);
         stage.show();
     }
